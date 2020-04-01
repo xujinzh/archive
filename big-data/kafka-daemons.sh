@@ -16,7 +16,7 @@ function start()
 		do
 			smill=`date "+%N"`
 			stdate=`date "+%Y-%m-%d %H:%M:%S,${smill:0:3}"`
-			ssh jinzhongxu@$i "source /etc/profile;echo [$sdate] INFO [Kafka Broker $i] begins to execute the startup operation.;/home/jinzhongxu/kafka/bin/kafka-server-start.sh /home/jinzhongxu/kakfa/config/server.properties>/dev/null;" &
+			ssh jinzhongxu@$i "source /etc/profile;echo [$sdate] INFO [Kafka Broker $i] begins to execute the startup operation.;/home/jinzhongxu/kafka/bin/kafka-server-start.sh /home/jinzhongxu/kafka/config/server.properties>/dev/null;" &
 			sleep 1
 		done
 }
