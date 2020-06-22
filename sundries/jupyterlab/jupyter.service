@@ -1,0 +1,15 @@
+[Unit]
+Description=Jupyter Notebook
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/miniconda/bin/jupyter-lab --config=/home/jinzhongxu/.jupyter/jupyter_notebook_config.py --no-browser
+User=jinzhongxu
+Group=jinzhongxu
+WorkingDirectory=/home/jinzhongxu/
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
