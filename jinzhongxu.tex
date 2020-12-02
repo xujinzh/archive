@@ -40,7 +40,7 @@
 
 \DeclareMathOperator{\Rank}{rank}%定义求秩算子
 
-\title{计算机视觉}
+\title{计算机视觉的数学基础}
 
 \author{徐金中 \\ Email: \href{mailto:jinzhongxu@csu.ac.cn}{jinzhongxu@csu.ac.cn}}
 
@@ -61,7 +61,7 @@
 
 %\newpage
 
-\section{卷积神经网络}
+\section{卷积网络和微积分}
 
 %\begin{figure}[ht] %htbp
 
@@ -75,10 +75,14 @@
 
 %\end{figure}
 
-\subsection[PS]{Panoptic Segmentation}
-\begin{enumerate}
-	\item \textbf{Windows:}建议使用\href{https://miktex.org/download}{MikTex} + \href{http://texstudio.sourceforge.net/}{TeXstudio};
-	\item \textbf{Mac:}建议使用\href{http://www.tug.org/mactex/mactex-download.html}{MacTeX}(or MiKTeX) +  TeXstudio.
-\end{enumerate}
+\begin{equation}\label{fft}
+	F(\omega) = \mathcal{F}[f(t)] = \int_{-\infty}^{\infty} f(t)e^{-i\omega t} \mathrm{d}t
+\end{equation}
+
+\section{损失函数和最优化}
+
+\begin{equation*}
+	\theta^{\star} = \underset{\theta \in \Theta}{\arg \min} J(\theta) + \lambda \|\theta\|^2
+\end{equation*} 
 
 \end{document}
